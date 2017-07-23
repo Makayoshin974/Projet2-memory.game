@@ -1,0 +1,27 @@
+body{
+	background-color: #9b7b58;
+}
+div#plateau{
+	background:rgba(155, 219, 173,0.8);
+	border: 2px solid #176d08 ;
+	border-style: ridge;
+	width:989px;
+	height:600px;
+	padding:3px;
+	margin:0px auto;
+
+}
+div#plateau > div{
+
+	background: url(../img/dos.gif) no-repeat center;
+	border-style: outset;
+	width:187px;
+	height:190px;
+	float:left;
+	margin:2px;
+	font-size:65px;
+	text-align:center;
+	font-weight: 40px;
+	color: lime;
+}
+
