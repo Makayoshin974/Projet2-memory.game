@@ -1,4 +1,4 @@
-let tableaucarte = ['Miaw','Miaw','Quii','Quii','Waf','Waf','Meuh','Meuh','Brrr','Brrr','Aouh','Aouh','Ouba','Ouba'];
+let tableaucarte = ['img/i1.png','img/i1.png','Quii','Quii','Waf','Waf','Meuh','Meuh','Brrr','Brrr','Aouh','Aouh','Ouba','Ouba'];
 let valeurcarte = [];
 let choixcarte = [];
 let retournee = 0;
@@ -25,7 +25,7 @@ let retournee = 0;
 		//devoilement carte au click
 		function retournement(carte,val){
 			if(carte.innerHTML == "" && valeurcarte.length < 2){
-				carte.style.background = 'teal';
+				carte.style.background ='teal';
 				carte.innerHTML = val;
 				if(valeurcarte.length == 0){
 					valeurcarte.push(val);
@@ -59,6 +59,7 @@ let retournee = 0;
 				    // reinitialise les tableaux
 				    valeurcarte = [];
 				    choixcarte = [];
+				    //alert('les deux cartes sont differentes');
 				}
 				setTimeout(pasbon, 500);
 			}
