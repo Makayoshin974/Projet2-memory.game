@@ -19,9 +19,10 @@ div#plateau > div{
 	height:190px;
 	float:left;
 	margin:2px;
-	font-size:65px;
+	font-size:80px;
 	text-align:center;
 	font-weight: 40px;
 	color: lime;
+	cursor: pointer;
 }
 

@@ -23,28 +23,30 @@ let retournee = 0;
 			document.getElementById('plateau').innerHTML = affiche;
 		}
 		//devoilement carte au click
-		function retournement(karte,val){
-			if(karte.innerHTML == "" && valeurcarte.length < 2){
-				karte.style.background = 'teal';
-				karte.innerHTML = val;
+		function retournement(carte,val){
+			if(carte.innerHTML == "" && valeurcarte.length < 2){
+				carte.style.background = 'teal';
+				carte.innerHTML = val;
 				if(valeurcarte.length == 0){
 					valeurcarte.push(val);
-					choixcarte.push(karte.id);
+					choixcarte.push(carte.id);
 				} else if(valeurcarte.length == 1){
 					valeurcarte.push(val);
-					choixcarte.push(karte.id);
+					choixcarte.push(carte.id);
 					if(valeurcarte[0] == valeurcarte[1]){
 						retournee += 2;
 				// reinitialise les deux tableaux
 				valeurcarte = [];
 				choixcarte = [];
 				// verifier si le tableau est vide
-				if(retournee == tableaucarte.length){
-
-					alert("Felicitations.... vous avez trouvez toutes les paires !! Rejouez");
-					document.getElementById('plateau').innerHTML = "";
-					newGame();
-				}
+				setTimeout(function(){
+					if(retournee == tableaucarte.length){
+						alert("Felicitations.... vous avez trouvez toutes les paires !! Rejouez");
+						document.getElementById('plateau').innerHTML = "";
+						newGame();
+					}
+				}, 1000)
+				
 			} else {
 				function pasbon(){
 				    // retourne les deux cartes 
@@ -58,7 +60,7 @@ let retournee = 0;
 				    valeurcarte = [];
 				    choixcarte = [];
 				}
-				setTimeout(pasbon, 700);
+				setTimeout(pasbon, 500);
 			}
 		}
 	}
